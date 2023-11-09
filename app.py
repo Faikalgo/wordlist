@@ -16,14 +16,7 @@ DB_NAME =  os.environ.get("DB_NAME")
 client = MongoClient(MONGODB_URI)
 db = client[DB_NAME]
 
-
 app = Flask(__name__)
-
-password = 'Pekanbaru123'
-cxn_str =  f'mongodb+srv://faikalgo:{password}@cluster0.l2d7js7.mongodb.net/?retryWrites=true&w=majority'
-client = MongoClient(cxn_str)
-
-db = client.dbsparta_plus_weak2
 
 @app.route('/')
 def main():
